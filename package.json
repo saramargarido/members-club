@@ -1,7 +1,7 @@
 {
-  "name": "hairday",
+  "name": "members-club",
   "version": "1.0.0",
-  "description": "Aplicação web de agendamento para corte de cabelo.",
+  "description": "Aplicação web responsiva de cartão fidelidade com o histórico de cortes de cabelo feitos por um clube de membros.",
   "author": "Sara Margarido",
   "scripts": {
     "build": "webpack",
