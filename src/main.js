@@ -8,4 +8,5 @@ import "./styles/global.css"
 import "./styles/header.css"
 
 // JS
+import "./modules/form/search.js"
 
