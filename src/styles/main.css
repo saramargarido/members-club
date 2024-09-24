@@ -2,35 +2,48 @@ main {
   margin: 4rem auto;
   width: 100%;
   max-width: 57rem;
-  height: 600px;
   display: grid;
   gap: 1rem;
   grid-template-areas:
-    "member card"
-    "history card"
-    "history card"
-    "history gift"
+    "member card card"
+    "history card card"
+    "history card card"
+    "history gift gift"
   ;
 
-  & div {
-    flex: 1;
-    background-color: blueviolet;
+  & #member {
+    grid-area: member;
+    padding: 1rem;
+
+    & figure {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      & .gradient {
+        padding: 2.5px;
+        width: 3.5rem;
+        height: 3.5rem;
+        border-radius: 10px;
+        background: conic-gradient(from 0deg at 50% 50%, #AF74DE, #6B84DE, #5DCAB7, #45B442, #5EC6B9, #698DD9, #B173DC, #D658B3, #D658B3, #AF74DE);
+
+        & img {
+          width: 100%;
+        }
+      }
+    }
   }
 
-  .member {
-    grid-area: member
-  }
-
-  .loyalty-card {
+  & #loyalty-card {
     grid-area: card;
   }
 
-  .gift {
-    grid-area: gift
+  & #gift {
+    grid-area: gift;
   }
 
-  .history {
-    grid-area: history
+  & #history {
+    grid-area: history;
   }
 
   @media (width <=768px) {
