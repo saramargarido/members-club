@@ -32,4 +32,9 @@ main {
   .history {
     grid-area: history
   }
+
+  @media (width <=768px) {
+    display: flex;
+    flex-direction: column;
+  }
 }
