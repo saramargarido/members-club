@@ -1,0 +1,35 @@
+main {
+  margin: 4rem auto;
+  width: 100%;
+  max-width: 57rem;
+  height: 600px;
+  display: grid;
+  gap: 1rem;
+  grid-template-areas:
+    "member card"
+    "history card"
+    "history card"
+    "history gift"
+  ;
+
+  & div {
+    flex: 1;
+    background-color: blueviolet;
+  }
+
+  .member {
+    grid-area: member
+  }
+
+  .loyalty-card {
+    grid-area: card;
+  }
+
+  .gift {
+    grid-area: gift
+  }
+
+  .history {
+    grid-area: history
+  }
+}
