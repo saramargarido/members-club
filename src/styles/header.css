@@ -32,6 +32,7 @@ header {
       font-size: 1rem;
       background-color: transparent;
       color: var(--base---gray-700);
+      line-height: 140%;
       caret-color: var(--main---pink);
       outline: none;
       border: none;

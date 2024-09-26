@@ -54,14 +54,35 @@ h2 {
   font-weight: var(--fw-bold);
 }
 
+p {
+  font-size: var(--body---text--sm);
+
+  @media (width <=768px) {
+    font-size: var(--body---text--xs);
+  }
+}
+
 small {
   font-size: var(--body---text--xs);
   color: var(--base---gray-500);
   line-height: 140%;
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
+
 .card {
   background-color: var(--base---gray-100);
   border: 1px solid var(--base---gray-300);
   border-radius: 1rem;
+}
+
+.subtitle {
+  font-size: var(--heading---subtitle--sm);
+  color: var(--base---gray-500);
+  text-transform: uppercase;
+  font-weight: var(--fw-bold);
+  line-height: 140%;
 }
