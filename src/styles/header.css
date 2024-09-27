@@ -10,9 +10,14 @@ header {
     width: auto;
   }
 
+  & form {
+    width: 100%;
+  }
+
   & .search-field {
-    width: 25rem;
-    max-width: 100%;
+    margin-inline: auto;
+    width: 100%;
+    max-width: 25rem;
     height: 3.5rem;
     background-color: var(--base---gray-300);
 
@@ -45,6 +50,7 @@ header {
       margin: .5rem;
       height: 2.5rem;
       width: 2.5rem;
+      padding: 0.625rem;
       background-color: var(--base---gray-700);
       opacity: .6;
       border-radius: .5rem;
