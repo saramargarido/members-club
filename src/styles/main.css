@@ -43,6 +43,10 @@ main {
     flex-direction: column;
     gap: 2rem;
 
+    @media (width <=768px) {
+      padding: 1.5rem 1.25rem;
+    }
+
     & .title-loyalty-card {
       display: flex;
       justify-content: space-between;
@@ -107,6 +111,10 @@ main {
     gap: 2rem;
     padding: 2rem;
 
+    @media (width <=768px) {
+      padding: 1rem 1.25rem;
+    }
+
     & .progress-area {
       flex: 1;
       display: flex;
@@ -124,6 +132,19 @@ main {
           font-weight: var(--fw-base);
           color: var(--base---gray-500);
         }
+      }
+
+      @media (width <=768px) {
+        gap: .25rem;
+
+        & h2 {
+          font-size: var(--heading---title--sm);
+
+          & span {
+            font-size: var(--body---text--sm);
+          }
+        }
+
       }
 
       & .progress-bar {
@@ -183,4 +204,5 @@ main {
     display: flex;
     flex-direction: column;
   }
+
 }
