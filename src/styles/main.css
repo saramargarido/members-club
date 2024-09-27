@@ -198,6 +198,82 @@ main {
 
   & #history {
     grid-area: history;
+    display: flex;
+    padding-right: 0.5rem;
+    padding-top: 1.75rem;
+
+    & .history-wrapper {
+      flex: 1;
+
+      @media (width >=768px) {
+        padding-left: 1.5rem;
+        padding-right: 1rem;
+        max-height: 22.5rem;
+        overflow: auto;
+
+        &::-webkit-scrollbar {
+          width: 0.5rem;
+        }
+
+        &::-webkit-scrollbar-track {
+          background-color: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background: var(--base---gray-300);
+          border-radius: 50px;
+        }
+
+      }
+
+      & .history-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      & hr {
+        margin-block: 1rem;
+        border: 1px solid var(--base---gray-200);
+      }
+
+      & ul.list {
+        display: flex;
+        flex-direction: column;
+        gap: .75rem;
+        padding-bottom: 1rem;
+
+        & li {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          & .date {
+            line-height: 120%;
+
+            & strong {
+              font-size: var(--heading---subtitle--sm);
+              color: var(--base---gray-600);
+            }
+          }
+
+          & .icon-check {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #DFEADD;
+            padding: .25rem;
+            border-radius: 50%;
+
+
+          }
+        }
+      }
+    }
+
+    @media (width <=768px) {
+      padding: 1.5rem 1.25rem;
+    }
   }
 
   @media (width <=768px) {

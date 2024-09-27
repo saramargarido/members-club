@@ -73,6 +73,10 @@ img {
   height: auto;
 }
 
+ul {
+  list-style: none;
+}
+
 .card {
   background-color: var(--base---gray-100);
   border: 1px solid var(--base---gray-300);
