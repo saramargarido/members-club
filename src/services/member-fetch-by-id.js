@@ -1,12 +1,15 @@
 import { apiConfig } from "./api-config"
 
+const clean = (string) => {
+  return string.replace(/[-\s]/g, "").toUpperCase()
+}
 export async function memberFetchById({ id }) {
   try {
     const response = await fetch(`${apiConfig.baseURL}/clients`)
 
     const data = await response.json()
     const dataFiltered = data.filter((member) =>
-      member.id === id
+      clean(member.id) === clean(id)
     )
     if (dataFiltered && dataFiltered.length) {
       return dataFiltered
