@@ -43,26 +43,28 @@ header {
       border: none;
     }
 
-    & .search-button {
-      position: absolute;
-      top: 0;
-      right: 0;
-      margin: .5rem;
-      height: 2.5rem;
-      width: 2.5rem;
-      padding: 0.625rem;
-      background-color: var(--base---gray-700);
+    & button {
+      all: unset;
+
+      &.search-button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: .5rem;
+        padding: 0.625rem;
+        background-color: var(--base---gray-700);
+        opacity: 1;
+        border-radius: .5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+    }
+
+
+    & .search-button:disabled {
       opacity: .6;
-      border-radius: .5rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
     }
-
-    & .search-button.length {
-      opacity: 1;
-    }
-
   }
 }
