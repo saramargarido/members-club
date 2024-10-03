@@ -243,7 +243,7 @@ main {
         border: 1px solid var(--base---gray-200);
       }
 
-      & ul.list {
+      & ul#list {
         display: flex;
         flex-direction: column;
         gap: .75rem;

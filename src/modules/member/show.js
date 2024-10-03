@@ -2,12 +2,15 @@ const memberInfos = document.getElementById("memberInfos")
 const showId = document.querySelector(".id .subtitle")
 const stickersArea = document.getElementById("stickers-area")
 const progressArea = document.getElementById("progress-area")
+const totalCuts = document.getElementById("total-cuts")
+const cutsList = document.getElementById("list")
 
 export function memberShow({ member }) {
   try {
     memberInfos.innerHTML = ""
     stickersArea.innerHTML = ""
     progressArea.innerHTML = ""
+    cutsList.innerHTML = ""
 
     showId.innerText = `ID ${member.id}`
 
@@ -64,6 +67,31 @@ export function memberShow({ member }) {
     progressBar.style.setProperty('--progress-width', `${progressPercent}%`);
 
     progressArea.append(progressAreaTitle, progressBar)
+    totalCuts.innerText = `${member.loyaltyCard.totalCuts} cortes`
+
+    member.appointmentHistory.forEach((appointment) => {
+      const cutLi = document.createElement("li")
+
+      const dateWrapper = document.createElement('div')
+      dateWrapper.classList.add("date")
+      const date = document.createElement("p")
+      date.innerHTML = `<strong> ${appointment.date} </strong>`
+      const hour = document.createElement("small")
+      hour.innerText = appointment.time
+      dateWrapper.append(date, hour)
+
+      const check = document.createElement("div")
+      check.classList.add("icon-check")
+      const checkIcon = document.createElement("img")
+      checkIcon.setAttribute("src", "./src/assets/icons/pinUnchecked.svg")
+      checkIcon.setAttribute("alt", "ícone de check")
+      check.append(checkIcon)
+
+      cutLi.append(dateWrapper, check)
+
+      cutsList.appendChild(cutLi)
+    })
+
   } catch (error) {
     alert("Não foi possível exibir o cliente")
     console.log(error)

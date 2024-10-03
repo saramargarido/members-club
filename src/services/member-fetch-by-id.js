@@ -11,7 +11,6 @@ export async function memberFetchById({ id }) {
     const dataFiltered = data.find((member) =>
       clean(member.id) === clean(id)
     )
-    console.log((dataFiltered))
     if (dataFiltered) {
       return dataFiltered
     } else {

@@ -20,6 +20,7 @@ form.onsubmit = async (event) => {
     if (member) {
       memberShow({ member })
       search.value = ""
+      searchButton.disabled = true
     }
   } catch (error) {
     alert("Algo deu errado, tente novamente mais tarde")
