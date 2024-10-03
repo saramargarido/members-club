@@ -8,10 +8,11 @@ export async function memberFetchById({ id }) {
     const response = await fetch(`${apiConfig.baseURL}/clients`)
 
     const data = await response.json()
-    const dataFiltered = data.filter((member) =>
+    const dataFiltered = data.find((member) =>
       clean(member.id) === clean(id)
     )
-    if (dataFiltered && dataFiltered.length) {
+    console.log((dataFiltered))
+    if (dataFiltered) {
       return dataFiltered
     } else {
       throw new Error("ID não encontrado");

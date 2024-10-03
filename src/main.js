@@ -9,5 +9,5 @@ import "./styles/header.css"
 import "./styles/main.css"
 
 // JS
-import "./modules/form/search.js"
+import "./modules/member/search.js"
 

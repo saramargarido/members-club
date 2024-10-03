@@ -28,9 +28,13 @@ main {
         height: 3.5rem;
         border-radius: 10px;
         background: conic-gradient(from 0deg at 50% 50%, #AF74DE, #6B84DE, #5DCAB7, #45B442, #5EC6B9, #698DD9, #B173DC, #D658B3, #D658B3, #AF74DE);
+        overflow: hidden;
 
         & img {
+          border-radius: 8px;
           width: 100%;
+          height: 100%;
+          object-fit: cover;
         }
       }
     }
