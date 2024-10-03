@@ -1,8 +1,13 @@
 const memberInfos = document.getElementById("memberInfos")
+const showId = document.querySelector(".id .subtitle")
+const stickersArea = document.getElementById("stickers-area")
 
 export function memberShow({ member }) {
   try {
     memberInfos.innerHTML = ""
+    stickersArea.innerHTML = ""
+
+    showId.innerText = `ID ${member.id}`
 
     const image = document.createElement("div")
     image.classList.add("gradient")
@@ -23,6 +28,26 @@ export function memberShow({ member }) {
     figCaption.append(memberName, memberSince)
 
     memberInfos.append(image, figCaption)
+
+    for (let i = 0; i < member.loyaltyCard.cutsNeeded; i++) {
+      const stickerWrapper = document.createElement("div")
+      const stickerCheck = document.createElement("img")
+      stickerCheck.setAttribute("src", "./src/assets/icons/PinCheck.png")
+      stickerCheck.setAttribute("alt", "ícone de um selo")
+      const stickerGift = document.createElement("img")
+      stickerGift.setAttribute("src", "./src/assets/icons/giftPlacehoder.svg")
+      stickerGift.setAttribute("alt", "ícone de um selo")
+
+      if (member.appointmentHistory[i]) {
+        stickerWrapper.append(stickerCheck)
+      } else if (!member.appointmentHistory[i] && i === (member.loyaltyCard.cutsNeeded - 1)) {
+        stickerWrapper.append(stickerGift)
+      }
+
+      stickersArea.append(stickerWrapper)
+    }
+
+
   } catch (error) {
     alert("Não foi possível exibir o cliente")
     console.log(error)

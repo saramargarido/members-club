@@ -69,9 +69,9 @@ main {
       }
     }
 
-    & .stickers-area {
+    & #stickers-area {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(5, minmax(1rem, 5.5rem));
       gap: 1rem;
 
       & div {
