@@ -1,0 +1,39 @@
+#modal {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #00000081;
+  justify-content: center;
+  align-items: center;
+
+  & .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    & .close {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      padding: 1rem;
+
+      & button {
+        all: unset;
+        cursor: pointer;
+      }
+    }
+
+    & p {
+      font-size: 6rem;
+    }
+
+    & h1 {
+      padding: 0rem 5rem 6rem 5rem;
+      font-size: var(--heading---title--md);
+    }
+  }
+}

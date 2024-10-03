@@ -7,6 +7,7 @@ import "./libs/dayjs.js"
 import "./styles/global.css"
 import "./styles/header.css"
 import "./styles/main.css"
+import "./styles/modal.css"
 
 // JS
 import "./modules/member/search.js"
