@@ -1,11 +1,13 @@
 const memberInfos = document.getElementById("memberInfos")
 const showId = document.querySelector(".id .subtitle")
 const stickersArea = document.getElementById("stickers-area")
+const progressArea = document.getElementById("progress-area")
 
 export function memberShow({ member }) {
   try {
     memberInfos.innerHTML = ""
     stickersArea.innerHTML = ""
+    progressArea.innerHTML = ""
 
     showId.innerText = `ID ${member.id}`
 
@@ -47,7 +49,21 @@ export function memberShow({ member }) {
       stickersArea.append(stickerWrapper)
     }
 
+    const progressAreaTitle = document.createElement("h2")
+    progressAreaTitle.innerHTML = `${member.loyaltyCard.cutsRemaining} <span> cortes restantes </span>`
 
+    const progressBar = document.createElement("div")
+    progressBar.classList.add("progress-bar")
+    const bar = document.createElement("span")
+    bar.classList.add("bar")
+    const steps = document.createElement("small")
+    steps.innerText = `${member.loyaltyCard.totalCuts} de ${member.loyaltyCard.cutsNeeded}`
+    progressBar.append(bar, steps)
+
+    const progressPercent = (member.loyaltyCard.totalCuts / member.loyaltyCard.cutsNeeded) * 100
+    progressBar.style.setProperty('--progress-width', `${progressPercent}%`);
+
+    progressArea.append(progressAreaTitle, progressBar)
   } catch (error) {
     alert("Não foi possível exibir o cliente")
     console.log(error)
