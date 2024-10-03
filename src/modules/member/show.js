@@ -2,6 +2,8 @@ const memberInfos = document.getElementById("memberInfos")
 
 export function memberShow({ member }) {
   try {
+    memberInfos.innerHTML = ""
+
     const image = document.createElement("div")
     image.classList.add("gradient")
 

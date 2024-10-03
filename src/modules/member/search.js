@@ -13,9 +13,18 @@ searchField.addEventListener("input", () => {
 
 form.onsubmit = async (event) => {
   event.preventDefault()
-  const id = search.value
-  const member = await memberFetchById({ id })
 
-  memberShow({ member })
+  try {
+    const id = search.value
+    const member = await memberFetchById({ id })
+    if (member) {
+      memberShow({ member })
+      search.value = ""
+    }
+  } catch (error) {
+    alert("Algo deu errado, tente novamente mais tarde")
+    console.log(error)
+  }
 }
+
 
