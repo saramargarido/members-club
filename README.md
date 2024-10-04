@@ -1,8 +1,5 @@
 # Members Club - Plataforma de Membros de Salão de Cabeleireiro
 
-![Visão Web](caminho/para/sua-imagem-web.png)
-![Visão Mobile](caminho/para/sua-imagem-mobile.png)
-
 ## Sobre o Projeto
 
 O **Members Club** é uma aplicação web para gerenciamento de membros de um salão de cabeleireiro. A plataforma permite buscar um membro pelo seu ID e exibir informações detalhadas como:
