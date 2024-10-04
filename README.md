@@ -86,10 +86,16 @@ Siga os passos abaixo para clonar e executar a aplicação localmente.
    Visualize os clientes mockados pesquisando esses IDs:
 
    ```
-   - 1
-   - 124-537-835-230
-   - 207-245-699-104
-   - 523-114-876-908
+   1
+   ```
+   ```
+   124-537-835-230
+   ```
+   ```
+   207-245-699-104
+   ```
+   ```
+   523-114-876-908
    ```
 
 ## Tecnologias Utilizadas
