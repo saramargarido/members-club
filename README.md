@@ -15,6 +15,7 @@ Este projeto foi desenvolvido utilizando **HTML**, **CSS** e **JavaScript**, com
 ## Funcionalidades
 
 - Buscar membros pelo ID
+- Alerta de erro quando não encontra ID
 - Exibir histórico de cortes e selos conquistados
 - Contagem de selos para corte grátis
 - Interface responsiva, compatível com web e mobile
@@ -78,6 +79,17 @@ Siga os passos abaixo para clonar e executar a aplicação localmente.
 
    ```
    http://localhost:3000
+   ```
+
+**Dica:**
+ 
+   Visualize os clientes mockados pesquisando esses IDs:
+
+   ```
+   - 1
+   - 124-537-835-230
+   - 207-245-699-104
+   - 523-114-876-908
    ```
 
 ## Tecnologias Utilizadas
