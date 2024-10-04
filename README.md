@@ -44,13 +44,13 @@ Siga os passos abaixo para clonar e executar a aplicação localmente.
 
 1. **Clone o repositório:**
   ```bash
-   git clone https://github.com/seu-usuario/nome-do-repositorio.git
+   git clone https://github.com/saramargarido/members-club.git
   ```
 
 2. **Navegue até o diretório do projeto:**
 
    ```bash
-   cd nome-do-repositorio
+   cd members-club
    ```
 
 3. **Instale as dependências:**
