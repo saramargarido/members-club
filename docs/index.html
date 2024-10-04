@@ -12,6 +12,65 @@
 <script defer src="main.js"></script></head>
 
 <body>
+  <header>
+    <img src="./src/assets/Logo.png" alt="logo" class="logo">
+    <form action="">
+      <div class="search-field">
+        <input type="text" placeholder="ID do cartão" id="search">
+        <button type="submit" class="search-button" id="search-button" disabled>
+          <img src="./src/assets/icons/arrow-left.svg" alt="">
+        </button>
+      </div>
+    </form>
+  </header>
+  <main id="main">
+    <div id="member" class="card">
+      <figure id="memberInfos">
+      </figure>
+    </div>
+    <div id="loyalty-card" class="card">
+      <div class="title-loyalty-card">
+        <div>
+          <h3 class="subtitle">Cartão fidelidade</h3>
+          <p>Ao fazer cortes de cabelo, o décimo sai de graça!</p>
+        </div>
+        <div class="id">
+          <h3 class="subtitle"></h3>
+        </div>
+      </div>
+      <div id="stickers-area">
+      </div>
+    </div>
+    <div id="gift" class="card">
+      <div id="progress-area">
+      </div>
+      <div class="icon-area">
+        <img src="./src/assets/icons/PinGift.png" alt="ícone de um presente">
+      </div>
+    </div>
+    <div id="history" class="card">
+      <div class="history-wrapper">
+        <div class="history-header">
+          <h3 class="subtitle">Histórico</h3>
+          <small id="total-cuts"></small>
+        </div>
+        <hr>
+        <ul role="list" id="list">
+        </ul>
+      </div>
+    </div>
+  </main>
+  <div id="modal">
+    <div class="card">
+      <div class="close">
+        <button id="close">
+          <img src="./src/assets/icons/close.svg" alt="ícone de fechar" />
+        </button>
+      </div>
+      <p>🎉</p>
+      <h1>Parabéns! Seu próximo corte é gratuito!</h1>
+    </div>
+  </div>
 </body>
 
 </html>
