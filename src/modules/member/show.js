@@ -9,7 +9,7 @@ const cutsList = document.getElementById("list")
 export function memberShow({ member }) {
   if (member) {
     try {
-      main.style.display = "grid"
+      window.innerWidth <= 768 ? main.style.display = "flex" : main.style.display = "none"
       memberInfos.innerHTML = ""
       stickersArea.innerHTML = ""
       progressArea.innerHTML = ""
